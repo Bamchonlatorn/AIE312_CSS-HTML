@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"); 
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+
+body {
+    display: flex; /* ทำให้ body เป็น flexbox */
+    flex-direction: column; /* แสดงในแนวตั้ง */
+    justify-content: center; /* จัดกลางในแนวตั้ง */
+    align-items: center; /* จัดกลางในแนวนอน */
+    height: 100vh; /* ใช้ความสูงทั้งหมดของหน้าจอ */
+    margin: 0; /* ไม่มี margin */
+    padding: 0; /* ไม่มี padding */
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background: url('https://images4.alphacoders.com/115/1151249.jpg') ;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 25px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+    margin: 0;
+    z-index: 1000;
+    background: rgba(30, 36, 77, 0.8); /* 0.8 คือที่่ทำให้จาง*/
+}
+
+
+.H {
+    position: fixed; /* ทำให้กล่องอยู่คงที่ */
+    top: 100px; /* วางใต้ nav */
+    left: 0;
+    right: 0; /* ขยายกล่องให้เต็มความกว้าง */
+    border-radius: 10px; /* เพิ่มมุมโค้ง */
+    padding: 20px; 
+    z-index: 999; /* ให้อยู่เหนือเนื้อหาอื่น */
+}
+
+.center-h {
+    display: flex;
+    justify-content: center; /* จัดให้อยู่กลางแนวนอน */
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-top: 200px; /* ปรับให้เว้นระยะจากโลโก้ */
+    background-color: rgba(47, 44, 44, 0.5);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: bisque;
+    font-size: large;
+
+}
+
+
+.buttons-control {
+    display: flex; /* ทำให้เป็น flexbox */
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+    justify-content: flex-end; /* ชิดขวา */
+    margin-left: auto; /* ช่วยให้ชิดขวา */
+}
+
+.right-menu a {
+    text-align: right;
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    cursor: grab;
+}
+
+.nav-logo p {
+    color: #DAA520;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Merriweather';
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* จัดวางปุ่มซ้าย-ขวาให้เต็มพื้นที่ */
+    align-items: center;
+    position: absolute;
+    left: 30px;
+
+}
+
+.menu-bt {
+    background-color: rgb(212,175,55);
+    border: none;
+    font-size: 18px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.nav-menu{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    padding: 20px;
+    margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-menu ul {
+    list-style-type: none; /* ซ่อนตัวเลขหรือ bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* จัดเรียงรายการในแนวนอน */
+}
+
+.nav-menu ul li {
+    margin: 0 15px; /* เว้นระยะระหว่างเมนู */
+
+}
+
+.nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding: 15px 0;
+}
+
+
+
+.link:hover, .active {
+    border-bottom: 2px solid #DAA520;
+}
+
+
+.nav-button .btn {
+    width: 60px;
+    height: 50px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 10px; /* เว้นระยะห่างระหว่างปุ่ม */
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.nav-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.buttons {
+    background-color: rgb(212,175,55);
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#loginBtn {
+    margin-right: 10px;
+     font-size: 15px; /* เว้นระยะห่างระหว่างปุ่ม Search กับ Sign In */
+}
+
+.sign-btn {
+    margin-right: 50px;
+    font-size: 15px; /* ใช้ auto เพื่อเลื่อนปุ่มไปทางซ้ายสุด */
+}
+
+.Box-Photo {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    margin-top: 60px;
+    height: 740px;
+    width: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.15) translateZ(0);
+    background-size: 300px;
+}
+
+.Box-Photo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* ช่วยให้รูปภาพจัดเรียงในหลายแถว */
+    justify-content: space-between; /* ให้เว้นระยะห่างระหว่างรูปภาพ */
+}
+
+.image-item {
+    flex: 1 1 calc(25% - 10px); /* กำหนดความกว้างเป็น 25% สำหรับ 4 รูปในแถว */
+    margin: 5px; /* ระยะห่างระหว่างรูปภาพ */
+    box-sizing: border-box; /* ทำให้รวม padding/margin ในขนาด */
+    overflow: hidden; /* ป้องกันภาพล้นกรอบ */
+}
+
+
+.image-item img {
+    width: 100%; /* รูปภาพกว้างเต็ม */
+    height: 80%; /* สูงเต็มกรอบ */
+    object-fit: cover; /* ครอบคลุมพื้นที่ */
+}
+
+
+
+.Box-Photo {
+    margin-top: 20px; /* เว้นระยะห่างจาก nav */
+}
+
+.text-h {
+    font-size: 30px;
+    margin-left: 70PX;
+}
